@@ -5,7 +5,7 @@
 package muxpress
 
 import (
-	"github.com/szkiba/xk6-mock/mock"
+	"github.com/rlnas/xk6-mock-server/mock"
 	"go.k6.io/k6/js/modules"
 )
 

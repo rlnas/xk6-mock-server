@@ -106,5 +106,5 @@ mock.skip('https://example.com', app => {
 
 ---
 
-The API documentation bellow was generated from [index.d.ts](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts) file.
+The API documentation bellow was generated from [index.d.ts](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts) file.
 

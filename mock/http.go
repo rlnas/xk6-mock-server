@@ -26,6 +26,32 @@ func (mod *Module) wrapHTTPExports(defaults *sobek.Object) {
 	}
 }
 
+func (mod *Module) parseBody(args []sobek.Value, index int) {
+	// Extract request object and check type assertion
+	reqObj, ok := args[index].(*sobek.Object)
+	if !ok {
+		//mod.logger.Error("Invalid request object: expected *sobek.Object")
+		return // If the request object is invalid, skip body parsing silently
+	}
+
+	// Get the body, but don't enforce a type assertion
+	bodyVal := reqObj.Get("body")
+
+	// If there's no body or it's undefined, skip parsing
+	if bodyVal == nil || bodyVal == sobek.Undefined() {
+		return
+	}
+
+	// Check if the body is a string
+	body, ok := bodyVal.Export().(string)
+	if !ok {
+		return // If the body isn't a string, skip parsing (optional behavior)
+	}
+
+	// No renaming: keep the body attribute and set the raw body
+	reqObj.Set("body", mod.runtime().ToValue(body))
+}
+
 func (mod *Module) wrap(this *sobek.Object, method string, index int) {
 	v := this.Get(method)
 
@@ -37,6 +63,9 @@ func (mod *Module) wrap(this *sobek.Object, method string, index int) {
 	wrapper := func(call sobek.FunctionCall) sobek.Value {
 		if len(call.Arguments) > index {
 			mod.rewrite(call.Arguments, index)
+
+			// Add body parsing here (new functionality)
+			mod.parseBody(call.Arguments, index)
 		}
 
 		v, err := callable(mod.runtime().GlobalObject(), call.Arguments...)

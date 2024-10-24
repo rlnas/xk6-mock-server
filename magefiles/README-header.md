@@ -1,5 +1,5 @@
-[![Go Report Card](https://goreportcard.com/badge/github.com/szkiba/xk6-mock)](https://goreportcard.com/report/github.com/szkiba/xk6-mock)
-[![GitHub Actions](https://github.com/szkiba/xk6-mock/workflows/Test/badge.svg)](https://github.com/szkiba/xk6-mock/actions?query=workflow%3ATest+branch%3Amaster)
+[![Go Report Card](https://goreportcard.com/badge/github.com/rlnas/xk6-mock-server)](https://goreportcard.com/report/github.com/rlnas/xk6-mock-server)
+[![GitHub Actions](https://github.com/rlnas/xk6-mock-server/workflows/Test/badge.svg)](https://github.com/rlnas/xk6-mock-server/actions?query=workflow%3ATest+branch%3Amaster)
 [![codecov](https://codecov.io/gh/szkiba/xk6-mock/branch/master/graph/badge.svg?token=GK1JNCPH8U)](https://codecov.io/gh/szkiba/xk6-mock)
 [![Documentation](https://img.shields.io/badge/docs-reference-blue?logo=readme&logoColor=lightgray)](https://ivan.szkiba.hu/xk6-mock)
 
@@ -38,7 +38,7 @@ export default async function () {
 
 ## Download
 
-You can download pre-built k6 binaries from [Releases](https://github.com/szkiba/xk6-mock/releases/) page. Check [Packages](https://github.com/szkiba/xk6-mock/pkgs/container/xk6-mock) page for pre-built k6 Docker images.
+You can download pre-built k6 binaries from [Releases](https://github.com/rlnas/xk6-mock-server/releases/) page. Check [Packages](https://github.com/rlnas/xk6-mock-server/pkgs/container/xk6-mock) page for pre-built k6 Docker images.
 
 ## Build
 
@@ -62,7 +62,7 @@ You must have the latest Go version installed to build the k6 binary. The latest
 2. Build the binary:
 
    ```shell
-   xk6 build --with github.com/szkiba/xk6-mock@latest
+   xk6 build --with github.com/rlnas/xk6-mock-server@latest
    ```
 
 > **Note**
@@ -74,7 +74,7 @@ If you want to add a feature or make a fix, clone the project and build it using
 
 ```bash
 git clone git@github.com:szkiba/xk6-mock.git && cd xk6-mock
-xk6 build --with github.com/szkiba/xk6-mock@latest=.
+xk6 build --with github.com/rlnas/xk6-mock-server@latest=.
 ```
 
 ## Docker
@@ -95,7 +95,7 @@ docker run -v %cd%:/scripts -it --rm ghcr.io/szkiba/xk6-mock:latest run --out=da
 
 ## Example scripts
 
-There are many examples in the [scripts](https://github.com/szkiba/xk6-mock/tree/master/scripts) directory that show how to use various features of the extension.
+There are many examples in the [scripts](https://github.com/rlnas/xk6-mock-server/tree/master/scripts) directory that show how to use various features of the extension.
 
 # API
 

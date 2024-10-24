@@ -1,5 +1,5 @@
-[![Go Report Card](https://goreportcard.com/badge/github.com/szkiba/xk6-mock)](https://goreportcard.com/report/github.com/szkiba/xk6-mock)
-[![GitHub Actions](https://github.com/szkiba/xk6-mock/workflows/Test/badge.svg)](https://github.com/szkiba/xk6-mock/actions?query=workflow%3ATest+branch%3Amaster)
+[![Go Report Card](https://goreportcard.com/badge/github.com/rlnas/xk6-mock-server)](https://goreportcard.com/report/github.com/rlnas/xk6-mock-server)
+[![GitHub Actions](https://github.com/rlnas/xk6-mock-server/workflows/Test/badge.svg)](https://github.com/rlnas/xk6-mock-server/actions?query=workflow%3ATest+branch%3Amaster)
 [![codecov](https://codecov.io/gh/szkiba/xk6-mock/branch/master/graph/badge.svg?token=GK1JNCPH8U)](https://codecov.io/gh/szkiba/xk6-mock)
 [![Documentation](https://img.shields.io/badge/docs-reference-blue?logo=readme&logoColor=lightgray)](https://ivan.szkiba.hu/xk6-mock)
 
@@ -38,7 +38,7 @@ export default async function () {
 
 ## Download
 
-You can download pre-built k6 binaries from [Releases](https://github.com/szkiba/xk6-mock/releases/) page. Check [Packages](https://github.com/szkiba/xk6-mock/pkgs/container/xk6-mock) page for pre-built k6 Docker images.
+You can download pre-built k6 binaries from [Releases](https://github.com/rlnas/xk6-mock-server/releases/) page. Check [Packages](https://github.com/rlnas/xk6-mock-server/pkgs/container/xk6-mock) page for pre-built k6 Docker images.
 
 ## Build
 
@@ -62,7 +62,7 @@ You must have the latest Go version installed to build the k6 binary. The latest
 2. Build the binary:
 
    ```shell
-   xk6 build --with github.com/szkiba/xk6-mock@latest
+   xk6 build --with github.com/rlnas/xk6-mock-server@latest
    ```
 
 > **Note**
@@ -74,7 +74,7 @@ If you want to add a feature or make a fix, clone the project and build it using
 
 ```bash
 git clone git@github.com:szkiba/xk6-mock.git && cd xk6-mock
-xk6 build --with github.com/szkiba/xk6-mock@latest=.
+xk6 build --with github.com/rlnas/xk6-mock-server@latest=.
 ```
 
 ## Docker
@@ -95,7 +95,7 @@ docker run -v %cd%:/scripts -it --rm ghcr.io/szkiba/xk6-mock:latest run --out=da
 
 ## Example scripts
 
-There are many examples in the [scripts](https://github.com/szkiba/xk6-mock/tree/master/scripts) directory that show how to use various features of the extension.
+There are many examples in the [scripts](https://github.com/rlnas/xk6-mock-server/tree/master/scripts) directory that show how to use various features of the extension.
 
 # API
 
@@ -210,7 +210,7 @@ mock.skip('https://example.com', app => {
 
 ---
 
-The API documentation bellow was generated from [index.d.ts](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts) file.
+The API documentation bellow was generated from [index.d.ts](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts) file.
 
 
 <a name="classesapplicationmd"></a>
@@ -247,7 +247,7 @@ Creates a new application instance.
 
 ##### Defined in
 
-[index.d.ts:111](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L111)
+[index.d.ts:111](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L111)
 
 ### Methods
 
@@ -272,7 +272,7 @@ You can provide multiple middleware functions.
 
 ##### Defined in
 
-[index.d.ts:171](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L171)
+[index.d.ts:171](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L171)
 
 ___
 
@@ -297,7 +297,7 @@ You can provide multiple middleware functions.
 
 ##### Defined in
 
-[index.d.ts:121](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L121)
+[index.d.ts:121](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L121)
 
 ___
 
@@ -322,7 +322,7 @@ You can provide multiple middleware functions.
 
 ##### Defined in
 
-[index.d.ts:131](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L131)
+[index.d.ts:131](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L131)
 
 ___
 
@@ -347,7 +347,7 @@ The instance for fluent/chaining API
 
 ##### Defined in
 
-[index.d.ts:206](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L206)
+[index.d.ts:206](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L206)
 
 ___
 
@@ -372,7 +372,7 @@ You can provide multiple middleware functions.
 
 ##### Defined in
 
-[index.d.ts:181](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L181)
+[index.d.ts:181](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L181)
 
 ___
 
@@ -397,7 +397,7 @@ You can provide multiple middleware functions.
 
 ##### Defined in
 
-[index.d.ts:161](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L161)
+[index.d.ts:161](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L161)
 
 ___
 
@@ -422,7 +422,7 @@ You can provide multiple middleware functions.
 
 ##### Defined in
 
-[index.d.ts:141](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L141)
+[index.d.ts:141](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L141)
 
 ___
 
@@ -447,7 +447,7 @@ You can provide multiple middleware functions.
 
 ##### Defined in
 
-[index.d.ts:151](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L151)
+[index.d.ts:151](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L151)
 
 ___
 
@@ -470,7 +470,7 @@ Mount static web content from given source directory.
 
 ##### Defined in
 
-[index.d.ts:197](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L197)
+[index.d.ts:197](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L197)
 
 ___
 
@@ -493,7 +493,7 @@ Uses the specified middleware function or functions.
 
 ##### Defined in
 
-[index.d.ts:189](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L189)
+[index.d.ts:189](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L189)
 
 
 <a name="interfacesmockoptionsmd"></a>
@@ -521,7 +521,7 @@ True value indicaes that given mock definition should be ignored.
 
 ##### Defined in
 
-[index.d.ts:29](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L29)
+[index.d.ts:29](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L29)
 
 ___
 
@@ -533,7 +533,7 @@ True value indicates synchronous mode operation. You should use it for synchrono
 
 ##### Defined in
 
-[index.d.ts:24](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L24)
+[index.d.ts:24](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L24)
 
 
 <a name="interfacesrequestmd"></a>
@@ -564,7 +564,7 @@ Content-Type is `application/json`.
 
 ##### Defined in
 
-[index.d.ts:226](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L226)
+[index.d.ts:226](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L226)
 
 ___
 
@@ -576,7 +576,7 @@ This property is an object that contains cookies sent by the request.
 
 ##### Defined in
 
-[index.d.ts:231](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L231)
+[index.d.ts:231](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L231)
 
 ___
 
@@ -604,7 +604,7 @@ the header field value.
 
 ##### Defined in
 
-[index.d.ts:278](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L278)
+[index.d.ts:278](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L278)
 
 ___
 
@@ -632,7 +632,7 @@ the header field value.
 
 ##### Defined in
 
-[index.d.ts:286](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L286)
+[index.d.ts:286](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L286)
 
 ___
 
@@ -644,7 +644,7 @@ Contains a string corresponding to the HTTP method of the request: GET, POST, PU
 
 ##### Defined in
 
-[index.d.ts:236](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L236)
+[index.d.ts:236](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L236)
 
 ___
 
@@ -658,7 +658,7 @@ This object defaults to empty.
 
 ##### Defined in
 
-[index.d.ts:243](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L243)
+[index.d.ts:243](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L243)
 
 ___
 
@@ -670,7 +670,7 @@ Contains the path part of the request URL.
 
 ##### Defined in
 
-[index.d.ts:248](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L248)
+[index.d.ts:248](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L248)
 
 ___
 
@@ -682,7 +682,7 @@ Contains the request protocol string: either http or (for TLS requests) https.
 
 ##### Defined in
 
-[index.d.ts:253](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L253)
+[index.d.ts:253](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L253)
 
 ___
 
@@ -706,7 +706,7 @@ console.dir(req.query.color);
 
 ##### Defined in
 
-[index.d.ts:270](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L270)
+[index.d.ts:270](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L270)
 
 
 <a name="interfacesresponsemd"></a>
@@ -750,7 +750,7 @@ Appends the specified value to the HTTP response header field. If the header is 
 
 ##### Defined in
 
-[index.d.ts:306](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L306)
+[index.d.ts:306](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L306)
 
 ___
 
@@ -776,7 +776,7 @@ Sends a binray response. This method sends a response (with the "application/oct
 
 ##### Defined in
 
-[index.d.ts:334](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L334)
+[index.d.ts:334](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L334)
 
 ___
 
@@ -802,7 +802,7 @@ Sends a HTML text response. This method sends a response (with the correct conte
 
 ##### Defined in
 
-[index.d.ts:327](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L327)
+[index.d.ts:327](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L327)
 
 ___
 
@@ -828,7 +828,7 @@ Sends a JSON response. This method sends a response (with the correct content-ty
 
 ##### Defined in
 
-[index.d.ts:313](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L313)
+[index.d.ts:313](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L313)
 
 ___
 
@@ -855,7 +855,7 @@ Redirects to the URL, with specified status, a positive integer that corresponds
 
 ##### Defined in
 
-[index.d.ts:382](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L382)
+[index.d.ts:382](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L382)
 
 ___
 
@@ -885,7 +885,7 @@ Otherwise the method sets the Content-Type to "application/json" and convert par
 
 ##### Defined in
 
-[index.d.ts:345](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L345)
+[index.d.ts:345](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L345)
 
 ___
 
@@ -912,7 +912,7 @@ Sets the response’s HTTP header field to value.
 
 ##### Defined in
 
-[index.d.ts:374](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L374)
+[index.d.ts:374](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L374)
 
 ___
 
@@ -938,7 +938,7 @@ Sets the HTTP status for the response.
 
 ##### Defined in
 
-[index.d.ts:352](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L352)
+[index.d.ts:352](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L352)
 
 ___
 
@@ -965,7 +965,7 @@ Sends a plain text response. This method sends a response (with the correct cont
 
 ##### Defined in
 
-[index.d.ts:321](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L321)
+[index.d.ts:321](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L321)
 
 ___
 
@@ -995,7 +995,7 @@ mime the content type
 
 ##### Defined in
 
-[index.d.ts:359](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L359)
+[index.d.ts:359](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L359)
 
 ___
 
@@ -1021,7 +1021,7 @@ Adds the header field to the Vary response header.
 
 ##### Defined in
 
-[index.d.ts:366](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L366)
+[index.d.ts:366](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L366)
 
 
 <a name="modulesmd"></a>
@@ -1064,7 +1064,7 @@ Middleware defines middleware and request handler callback function.
 
 ##### Defined in
 
-[index.d.ts:87](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L87)
+[index.d.ts:87](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L87)
 
 ### Functions
 
@@ -1116,7 +1116,7 @@ mock.skip('https://example.com', app => {
 
 ##### Defined in
 
-[index.d.ts:67](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L67)
+[index.d.ts:67](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L67)
 
 ___
 
@@ -1140,4 +1140,4 @@ This function will remove mock definition associated to given URL and stop the r
 
 ##### Defined in
 
-[index.d.ts:76](https://github.com/szkiba/xk6-mock/blob/master/api/index.d.ts#L76)
+[index.d.ts:76](https://github.com/rlnas/xk6-mock-server/blob/master/api/index.d.ts#L76)

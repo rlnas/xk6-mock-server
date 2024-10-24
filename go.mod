@@ -1,4 +1,4 @@
-module github.com/szkiba/xk6-mock
+module github.com/rlnas/xk6-mock-server
 
 go 1.20
 

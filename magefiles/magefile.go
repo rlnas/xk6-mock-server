@@ -39,7 +39,7 @@ func Test() error {
 }
 
 func Build() error {
-	return shellcmd.Command(`xk6 build --with github.com/szkiba/xk6-mock=.`).Run()
+	return shellcmd.Command(`xk6 build --with github.com/rlnas/xk6-mock-server=.`).Run()
 }
 
 func It() error {
