@@ -5,6 +5,7 @@
 package mock
 
 import (
+	"github.com/dop251/goja"
 	"github.com/grafana/sobek"
 	"github.com/sirupsen/logrus"
 	"github.com/szkiba/muxpress"
@@ -34,16 +35,20 @@ func newLogger(vu modules.VU) logrus.FieldLogger { // nolint:varnamelen
 	return logger.WithField("module", "mock")
 }
 
-func newApplicationCtor(vu modules.VU, sync bool) func(sobek.ConstructorCall) *sobek.Object { // nolint:varnamelen
+func newApplicationCtor(vu modules.VU, sync bool) func(goja.ConstructorCall) *goja.Object { // nolint:varnamelen
 	opts := []muxpress.Option{muxpress.WithLogger(newLogger(vu))}
 
 	if !sync {
 		opts = append(opts, muxpress.WithRunner(newRunner(vu)))
 	}
 
-	ctor, err := muxpress.NewApplicationConstructor(vu.Runtime(), opts...)
+	// vu.Runtime() returns *goja.Runtime directly, no need for a type assertion to *sobek.Runtime
+	runtime := vu.Runtime() // This is *goja.Runtime
+
+	// Use the runtime directly in the muxpress.NewApplicationConstructor call
+	ctor, err := muxpress.NewApplicationConstructor(runtime, opts...)
 	if err != nil {
-		common.Throw(vu.Runtime(), err)
+		common.Throw(runtime, err)
 	}
 
 	return ctor
